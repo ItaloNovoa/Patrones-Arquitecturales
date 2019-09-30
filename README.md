@@ -1,8 +1,16 @@
 # Patrones-Arquitecturales
 
+
+## si desea saber acerca de los costos generados por AWS en los servicios utilizados en este proyecto puede observarlo en los siguientes link
+- [costos EC2](https://aws.amazon.com/ec2/pricing/)
+- [costos S3](https://aws.amazon.com/s3/pricing/)
+- [costos VPC](https://aws.amazon.com/vpc/pricing/)
+- [RDS](https://aws.amazon.com/rds/pricing/)
+- ademas se dejara este link en el cual podra calcular los costos de forma mas interactiva dependiendo los servicios y el tiempo de uso del servicio [Calculadora de costos](https://calculator.s3.amazonaws.com/index.html)
+
 # Como desplegar un sitio estático usando S3
 ##### en el siguiente tutorial se subira como archivo estatico un .html basico, con el fin de poder hacer este archivo visible a travez de la red de forma publica
-##### Si desea puede ver un video describiendo los mismo pasos mostrados en el siguiente tutorial [Video](https://www.youtube.com/watch?v=nhXOhzIjrUI&feature=youtu.be)
+##### Si desea puede ver un video describiendo los mismo pasos mostrados en el siguiente tutorial [VideoS3](https://www.youtube.com/watch?v=nhXOhzIjrUI&feature=youtu.be)
 
 ## Prerequisitos 
 - git
@@ -53,4 +61,28 @@
 - paso 18: podemos ver como el objeto el cual acabamos de subir se pude visualizar de modo publico a travez de la red
 ![image](https://user-images.githubusercontent.com/42522754/65841033-e7bf3700-e2e4-11e9-84b2-89f998f31e11.png)
 
+
+# Como desplegar springboot con maven usando mysql AWS en una maquina linux EC2 de AWS
+
+##### en el siguiente tutorial se explicara como conectar un formulario hecho en spring-boot(MVN) a una base de datos MYSQL de AWS y posteriormente desplegarlo a una maquina linux de AWS
+##### Si desea puede ver un video describiendo los mismo pasos mostrados en el siguiente tutorial [VideoSpringboot con aws](https://www.youtube.com/watch?v=nhXOhzIjrUI&feature=youtu.be)
+
+## Prerequisitos 
+- git
+- cuenta en amazon web services
+- maven
+- java 1.8
+
+## Instrucciones
+  
+- paso 1 : descargar el repositorio
+  - paso 1.1 : ingrese a la consola o terminal
+  - paso 2.2 : ingrese el siguiente codigo en la consola o terminal para tener el formulario dinamicocon spring-boot (si usted lo desea puede usar un archivo propio y no descargar el repositorio)
+  ~~~~
+  git clone https://github.com/ItaloNovoa/Patrones-Arquitecturales
+  ~~~~
+- paso 2 : logearse en aws y posteriormente ir a AWS CONSOLE
+![image](https://user-images.githubusercontent.com/42522754/65840388-138aee80-e2de-11e9-8281-5c24e623b48c.png)
+- paso 3 : dar click en servicios
+![image](https://user-images.githubusercontent.com/42522754/65840398-492fd780-e2de-11e9-827e-f76e28188c45.png)
 
