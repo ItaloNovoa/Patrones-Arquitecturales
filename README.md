@@ -2,6 +2,7 @@
 
 # Como desplegar un sitio estático usando S3
 ##### en el siguiente tutorial se subira como archivo estatico un .html basico, con el fin de poder hacer este archivo visible a travez de la red de forma publica
+##### Si desea puede ver un video describiendo los mismo pasos mostrados en el siguiente tutorial [Video](https://www.youtube.com/watch?v=nhXOhzIjrUI&feature=youtu.be)
 
 ## Prerequisitos 
 - git
