@@ -65,19 +65,20 @@
 # Como desplegar springboot con maven usando mysql AWS en una maquina linux EC2 de AWS
 
 ##### en el siguiente tutorial se explicara como conectar un formulario hecho en spring-boot(MVN) a una base de datos MYSQL de AWS y posteriormente desplegarlo a una maquina linux de AWS
-##### Si desea puede ver un video describiendo los mismo pasos mostrados en el siguiente tutorial [VideoSpringboot con aws](https://www.youtube.com/watch?v=nhXOhzIjrUI&feature=youtu.be)
+##### Si desea puede ver un video describiendo los mismo pasos mostrados en el siguiente tutorial [VideoSpringboot con aws](https://www.youtube.com/watch?v=dFyCx1MGVgo)
 
 ## Prerequisitos 
 - git
 - cuenta en amazon web services
 - maven
 - java 1.8
+- dbeaver
 
 ## Instrucciones
   
 - paso 1 : descargar el repositorio
   - paso 1.1 : ingrese a la consola o terminal
-  - paso 2.2 : ingrese el siguiente codigo en la consola o terminal para tener el formulario dinamicocon spring-boot (si usted lo desea puede usar un archivo propio y no descargar el repositorio)
+  - paso 1.2 : ingrese el siguiente codigo en la consola o terminal para tener el formulario dinamicocon spring-boot (si usted lo desea puede usar un archivo propio y no descargar el repositorio)
   ~~~~
   git clone https://github.com/ItaloNovoa/Patrones-Arquitecturales
   ~~~~
@@ -85,4 +86,91 @@
 ![image](https://user-images.githubusercontent.com/42522754/65840388-138aee80-e2de-11e9-8281-5c24e623b48c.png)
 - paso 3 : dar click en servicios
 ![image](https://user-images.githubusercontent.com/42522754/65840398-492fd780-e2de-11e9-827e-f76e28188c45.png)
+- paso 4 : dar click en RDS para las bases de datos relacional
+![image](https://user-images.githubusercontent.com/42522754/65905584-6f10b700-e386-11e9-947c-87b6d9829605.png)
+- paso 5 : le damos en crear la base de datos
+![image](https://user-images.githubusercontent.com/42522754/65908058-37583e00-e38b-11e9-8c2e-d5de67838c69.png)
+- paso 6: procedemos a crear la base de datos de la siguiente forma y le damos en la opcion de free tier
+![image](https://user-images.githubusercontent.com/42522754/65908546-3ffd4400-e38c-11e9-9a43-60a9ba1e770e.png)
+![image](https://user-images.githubusercontent.com/42522754/65911035-886b3080-e391-11e9-9d3b-e7d621211fc0.png)
+- paso 7: dejamos los datos por defecto y le damos en auto generar claves
+![image](https://user-images.githubusercontent.com/42522754/65910373-29f18280-e390-11e9-806d-5e40c8d2e854.png)
+- paso 8: dejamos estoigual
+![image](https://user-images.githubusercontent.com/42522754/65910395-35dd4480-e390-11e9-9ac8-cf9a7063e4ea.png)
+![image](https://user-images.githubusercontent.com/42522754/65910427-442b6080-e390-11e9-95ae-4f9262c6d365.png)
+- paso 9: presionamos en configuracion adicional y en yes:
+![image](https://user-images.githubusercontent.com/42522754/65910547-8c4a8300-e390-11e9-93f1-86af28ee0f71.png)
+- paso 10: presionamos configuracion adicional y asignamos un nombre a la base de datos
+![image](https://user-images.githubusercontent.com/42522754/65910809-0c70e880-e391-11e9-96dd-dc79b4ad8525.png)
+- paso 11: le damos en crear la base de datos
+![image](https://user-images.githubusercontent.com/42522754/65911154-c405fa80-e391-11e9-8c54-b1e184ea263b.png)
+- paso 12: presionamos la opcion de ver credenciales y guardamos las credenciales para posteriormente ingresarlas en el codigo del repositorio y en Dbeaver
+![image](https://user-images.githubusercontent.com/42522754/65911250-fa437a00-e391-11e9-9dfa-07d8b46196c7.png)
+- paso 13: abrimos la carpeta /formularioDinamico del repositorio descargado en el paso 1.2 (en este caso lo abrire con el IDE de VISUAL STUDIO CODE) y cambiamos los datos de applcation.properties por los de las del paso anterior:
+![image](https://user-images.githubusercontent.com/42522754/65912213-74c0c980-e393-11e9-86dc-71e45329d6cb.png)
+- paso 14: ingresamos a la base de datos una vez este disponible
+![image](https://user-images.githubusercontent.com/42522754/65913101-e77e7480-e394-11e9-9439-a3045d7ca8ab.png)
+- paso 15: pegamos el endpoint en application.properties
+![image](https://user-images.githubusercontent.com/42522754/65913362-62478f80-e395-11e9-9c7c-7a52e3fba697.png)
+- paso 16: cambiamos la parte mostrada en la imagen por la del nombre de la base de datos puesto el paso 10
+![image](https://user-images.githubusercontent.com/42522754/65913830-23660980-e396-11e9-8726-39bdab400d8e.png)
+- paso 17: abrimos dbeaver y seguimos los siguientes pasos 
+![image](https://user-images.githubusercontent.com/42522754/65914203-a38c6f00-e396-11e9-8640-1f8058e8be39.png)
+![image](https://user-images.githubusercontent.com/42522754/65915112-53aea780-e398-11e9-8667-738cfa2a53e4.png)
+![image](https://user-images.githubusercontent.com/42522754/65915020-22ce7280-e398-11e9-8647-1ca29277b4c0.png)
+![image](https://user-images.githubusercontent.com/42522754/65915177-85c00980-e398-11e9-86ea-3185c8c6fc90.png)
+![image](https://user-images.githubusercontent.com/42522754/65915202-94a6bc00-e398-11e9-8bce-e1af37d48bab.png)
+![image](https://user-images.githubusercontent.com/42522754/65915710-91600000-e399-11e9-8ac1-420e6f5e74b7.png)
+- PASO 18: PARA ARREGLAR EL ERROR ANTERIOR PROCEDMOS A INGRESAR NUEVAMENTE A AWS
+![image](https://user-images.githubusercontent.com/42522754/65915837-db48e600-e399-11e9-92f5-db9a10127c6e.png)
+![image](https://user-images.githubusercontent.com/42522754/65916022-3da1e680-e39a-11e9-9ec7-9679e2b71aac.png)
+![image](https://user-images.githubusercontent.com/42522754/65916049-4bf00280-e39a-11e9-80ab-dc893610ae4d.png)
+![image](https://user-images.githubusercontent.com/42522754/65916147-6f1ab200-e39a-11e9-99ca-2366a33b5a67.png)
+- paso 19: volvemos a dBeaver y hacemos lo siguiente:
+![image](https://user-images.githubusercontent.com/42522754/65916550-29121e00-e39b-11e9-8f51-658cb29f1b62.png)
+![image](https://user-images.githubusercontent.com/42522754/65916602-43e49280-e39b-11e9-86ef-0c5abeaff111.png)
+![image](https://user-images.githubusercontent.com/42522754/65916642-5232ae80-e39b-11e9-9434-c33e3690aa44.png)
+![image](https://user-images.githubusercontent.com/42522754/65916674-5fe83400-e39b-11e9-92df-551b572fb44b.png)
+- paso 20: abrimos el sql editor con un clickderecho en la parte principal de las carpetas y despues click en SQL Editor
+
+![image](https://user-images.githubusercontent.com/42522754/65916827-a178df00-e39b-11e9-8f7e-ce93fd58f24a.png)
+- paso 21: copiamos el siguiente codigo en el script como se muestra en la siguiente imagen y le damos click en la flecha verde subrayada
+ ~~~~
+USE db1
+  ~~~~
+~~~~
+  CREATE TABLE first_Table(
+id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+firstname VARCHAR(30) NOT NULL,
+lastname VARCHAR(30) NOT NULL
+)
+~~~~
+![image](https://user-images.githubusercontent.com/42522754/65917258-98d4d880-e39c-11e9-96ae-bdc553ac7559.png)
+
+- paso 22: y despues vamos a a visual studio code y creamos una nueva terminal
+
+![image](https://user-images.githubusercontent.com/42522754/65917782-cb330580-e39d-11e9-82a1-ef0742f0d95d.png)
+
+- paso 23: la terminal se debe asi
+
+![image](https://user-images.githubusercontent.com/42522754/65919030-d20f4780-e3a0-11e9-8184-e759dd64f1f4.png)
+
+- paso 24: escribimos las siguientes lineas en la consola
+~~~~
+mvn install
+mvn spirng-boot:run
+~~~~
+- paso 25: al terminar de correr mvn spring-boot:run ingresamos a este link http://localhost:8080/ y veremos lo siguiente
+
+![image](https://user-images.githubusercontent.com/42522754/65920142-d426d580-e3a3-11e9-8a23-c03ca713cc5c.png)
+
+- paso 26: ingresaremos un usario y veremos la base de datos
+![image](https://user-images.githubusercontent.com/42522754/65920234-1e0fbb80-e3a4-11e9-8607-e43ee952a93b.png)
+
+
+![image](https://user-images.githubusercontent.com/42522754/65920217-13552680-e3a4-11e9-8a1f-37b4b2d7b8d2.png)
+
+![image](https://user-images.githubusercontent.com/42522754/65920404-88286080-e3a4-11e9-8428-8704f2fefa8a.png)
+
+
 
